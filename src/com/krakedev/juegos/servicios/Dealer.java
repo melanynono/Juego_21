@@ -69,5 +69,27 @@ public class Dealer {
 		}
 	}
 	
+	
+
+    public int generarAleatorio(int maximo) {
+    return (int) (Math.random() * (maximo + 1));
+    }
+    
+    public Carta entregarCarta() {
+    	
+    	if (naipe.isEmpty()) {
+    		return null;
+    	}
+    	
+    	int posicion = generarAleatorio(naipe.size());
+    	
+    	Carta carta = naipe.get(posicion);
+    	
+    	naipe.remove(posicion);
+    	
+    	return carta;
+    	
+    }
+
 
 }

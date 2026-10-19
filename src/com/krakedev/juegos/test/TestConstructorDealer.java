@@ -20,6 +20,8 @@ public class TestConstructorDealer {
             System.out.println("Error: el mazo no tiene 52 cartas");
         }
         
+        
+        
 	}
 
 }
