@@ -6,6 +6,9 @@ public class Carta {
 	private int valorJuego;
 	private String palo;
 	
+	public Carta () {
+		
+	}
 	
 	public String getValor() {
 		return valor;
@@ -29,9 +32,8 @@ public class Carta {
 	
 	public void imprimir() {
 		
-		System.out.println("Valor de la carta: " + valor);
-		System.out.println("Valor dentro del juego: " + valorJuego);
-		System.out.println("Palo : " + palo);
+		System.out.println(valor + " - " + palo + ", valorJuego = " + valorJuego);
+
 		
 	}
 	

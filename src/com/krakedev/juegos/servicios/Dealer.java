@@ -55,6 +55,8 @@ public class Dealer {
         		carta.setValor(valor);
         		carta.setPalo(palo);
         		
+        		naipe.add(carta);
+        		
         	}
         }
         
