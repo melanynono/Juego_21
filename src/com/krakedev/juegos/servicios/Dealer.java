@@ -11,6 +11,7 @@ public class Dealer {
 
 	public Dealer() {
 		naipe = new ArrayList<Carta>();
+		generarNaipe();
 	}
 	
 	public ArrayList<Carta> getNaipe() {
@@ -21,7 +22,50 @@ public class Dealer {
 		this.naipe = naipe;
 	}
 	
+	public void generarNaipe() {
+		
+		ArrayList<String> valores = new ArrayList<String>();
+		
+        valores.add("A");
+        valores.add("2");
+        valores.add("3");
+        valores.add("4");
+        valores.add("5");
+        valores.add("6");
+        valores.add("7");
+        valores.add("8");
+        valores.add("9");
+        valores.add("10");
+        valores.add("J");
+        valores.add("Q");
+        valores.add("K");
+        
+        ArrayList<String> palos = new ArrayList<String>();
+        palos.add("D");
+        palos.add("T");
+        palos.add("CN");
+        palos.add("CR");
+        
+        for(String palo : palos) {
+        	
+        	for(String valor : valores) {
+        		
+        		Carta carta = new Carta();
+        		
+        		carta.setValor(valor);
+        		carta.setPalo(palo);
+        		
+        	}
+        }
+        
+        
+	}
 	
+	public void imprimirNaipe () {
+		for(Carta carta : naipe) {
+			carta.imprimir();
+		}
+	}
 	
 
 }
