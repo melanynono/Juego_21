@@ -29,7 +29,13 @@ public class Jugador {
 		
 	}
 	
+	public void imprimir() {
+	    System.out.println("Nickname: " + nickname);
+	    System.out.println("Cartas del jugador:");
+	    
+	    for (Carta carta : cartas) {
+	        carta.imprimir();
+	    }
 	
-	
-
+	}
 }
