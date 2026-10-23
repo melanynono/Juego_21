@@ -110,7 +110,21 @@ public class Juego21 {
         return ganadores;
     }
     
-    
+    public ArrayList<Jugador> jugar() {
+        ArrayList<Jugador> ganadores = new ArrayList<Jugador>();
+
+        for (int i = 0; i < 3; i++) {
+            repartirRonda();
+
+            ganadores = validarGanador();
+
+            if (!ganadores.isEmpty()) {
+                break;
+            }
+        }
+
+        return ganadores;
+    }
     
     
 }
