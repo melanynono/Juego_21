@@ -35,7 +35,7 @@ public class Juego21 {
 			String valor = carta.getValor();		
 		switch (valor) {
 		    case "A":
-		    	carta.setValorJuego(11);
+		    	carta.setValorJuego(1);
 		    	break;
 		    	
 		    case "J":
@@ -111,6 +111,14 @@ public class Juego21 {
     }
     
     public ArrayList<Jugador> jugar() {
+
+        for (Jugador jugador : jugadores) {
+            jugador.getCartas().clear();
+            jugador.setPuntajeCartas(0);
+        }
+
+        inicializar();
+
         ArrayList<Jugador> ganadores = new ArrayList<Jugador>();
 
         for (int i = 0; i < 3; i++) {
