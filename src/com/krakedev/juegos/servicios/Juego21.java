@@ -80,7 +80,25 @@ public class Juego21 {
     	
         for (Jugador jugador : jugadores) {
             repartirCarta(jugador);
+           
         }
+        calcularTotal();
     	
     }
+    
+    public void calcularTotal() {
+        for (Jugador jugador : jugadores) {
+            int total = 0;
+
+            for (Carta carta : jugador.getCartas()) {
+                total = total + carta.getValorJuego();
+            }
+
+            jugador.setPuntajeCartas(total);
+        }
+    }
+    
+    
+    
+    
 }

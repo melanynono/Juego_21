@@ -6,6 +6,7 @@ public class Jugador {
 	
 	private String nickname;
 	private ArrayList<Carta>cartas = new ArrayList<>();
+    private int puntajeCartas;	
 	
 
     public Jugador() {}
@@ -23,6 +24,15 @@ public class Jugador {
 		this.cartas = cartas;
 	} 
 	
+	
+	public int getPuntajeCartas() {
+		return puntajeCartas;
+	}
+
+	public void setPuntajeCartas(int puntajeCartas) {
+		this.puntajeCartas = puntajeCartas;
+	}
+
 	public void recibirCarta(Carta carta) {
 		
 		cartas.add(carta);
